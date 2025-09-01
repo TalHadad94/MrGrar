@@ -1,0 +1,41 @@
+:root{
+    --bg:#0b0b0b; --text:#f6f6f6; --muted:#b8b8b8; --acc:#00c853; --acc-2:#1fa855; --card:#151515; --border:#222;
+    --container:1100px; --radius:16px; --shadow:0 8px 24px rgba(0,0,0,.2);
+    font-synthesis-weight: none;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Heebo","Rubik",system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:var(--text);text-decoration:none}
+.container{max-width:var(--container);margin-inline:auto;padding:16px}
+.site-header,.site-footer{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.site-footer{border-top:1px solid var(--border);border-bottom:0}
+.logo{font-weight:800;font-size:1.4rem}
+.logo span{color:var(--acc)}
+.nav a{margin-inline:.75rem;opacity:.85}
+.nav a.active{opacity:1;border-bottom:2px solid var(--acc)}
+.hero{padding-block:40px}
+.hero h1{font-size:2rem;margin:0 0 .5rem}
+.hero h1 span{color:var(--acc)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 16px;border:1px solid var(--border);background:#111;box-shadow:var(--shadow)}
+.btn-primary{background:var(--acc);color:#07150b}
+.btn-primary:hover{background:var(--acc-2)}
+.btn-secondary{background:#1a1a1a}
+.btn-whatsapp{background:#25D366;color:#07150b}
+.badges{display:flex;gap:10px;list-style:none;padding:0;margin:16px 0}
+.badges li{background:var(--card);padding:8px 12px;border-radius:999px;border:1px solid var(--border)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);padding:16px;border:1px solid var(--border);border-radius:var(--radius)}
+.areas .map-wrap{margin-top:12px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.areas iframe{width:100%;height:320px;border:0}
+.post-list{list-style:none;padding:0;margin:0}
+.post{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:16px;background:var(--card)}
+.post h2{margin:0 0 6px;font-size:1.2rem}
+.post time{color:var(--muted);font-size:.9rem}
+.post-body{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.contact-form{display:grid;gap:12px}
+label{display:grid;gap:6px}
+input,select,textarea{background:#101010;border:1px solid var(--border);color:var(--text);padding:10px;border-radius:10px}
+@media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
