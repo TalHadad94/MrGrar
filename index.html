@@ -12,7 +12,9 @@
     <meta property="og:url" content="https://www.mrgrar.co.il/" />
     <meta property="og:image" content="./assets/og.jpg" />
     <meta name="theme-color" content="#111" />
-    <link rel="preload" href="/assets/fonts/Heebo-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css" />
     <script type="application/ld+json">
     {
@@ -34,67 +36,109 @@
     </script>
 </head>
 
-<body>
+<body class="theme-redwhite">
+    <!-- Header -->
     <header class="site-header container">
-        <div class="brand">
-            <a href="/" class="logo" aria-label="מר גרר">מר <span>גרר</span></a>
-        </div>
+        <a href="./" class="brand-row">
+        <img src="./assets/logo.png" alt="מר גרר" class="brand-logo" />
+        <div class="brand-text">מר <span>גרר</span> — שירותי גרירה וחילוץ</div>
+        <div class="brand-text-phone">מר <span>גרר</span></div>
+        </a>
         <nav class="nav">
-            <a href="/" class="active">דף הבית</a>
-            <a href="./blog/">בלוג</a>
-            <a href="./contact.html">צור קשר</a>
+        <a href="./" class="active">דף הבית</a>
+        <a href="./blog/">בלוג</a>
+        <a href="./contact.html">צור קשר</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero container">
-            <h1>גרר בבאר יעקב והסביבה – <span>24/7</span></h1>
-            <p>הגעה מהירה, מחיר הוגן, שירות מקצועי: חילוץ, התנעה, פנצ׳ר, הובלת רכב למוסך.</p>
-            <div class="cta-row">
-                <a class="btn btn-primary" href="tel:+972524839975">📞 התקשר עכשיו</a>
-                <a class="btn btn-whatsapp" href="https://wa.me/972524839975?text=%D7%94%D7%99%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%20%D7%92%D7%A8%D7%A8" target="_blank" rel="noopener">WhatsApp</a>
-                <a class="btn btn-secondary" href="/contact.html#order">הזמן גרירה</a>
+    <!-- Hero (sticky CTA) -->
+    <div class="sticky-cta">
+        <a class="btn btn-call" href="tel:+972524839975">052-483-9975</a>
+        <a class="btn btn-call alt" href="tel:+972552765546">055-276-5546</a>
+        <a class="btn btn-wa" href="https://wa.me/972524839975" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+    <!-- STEP SLIDES -->
+    <main class="container">
+        <section class="steps">
+        <div class="steps-track" id="stepsTrack" aria-live="polite">
+            <!-- Step 1 -->
+            <article class="step slide current" data-step="1">
+            <div class="step-img">
+                <img src="./assets/img/truck-1.jpeg" alt="גרר בדרך אליכם" loading="eager" />
             </div>
-            <ul class="badges">
-                <li>הגעה מהירה</li>
-                <li>מחיר הוגן</li>
-                <li>זמין תמיד</li>
-            </ul>
-        </section>
-        <section class="services container">
-            <h2>שירותים עיקריים</h2>
-            <div class="grid">
-                <article class="card">
-                    <h3>גרירה עירונית ובין‑עירונית</h3>
-                    <p>גרירת רכב פרטי, מסחרי ודו‑גלגלי בבטחה לכל יעד.</p>
-                </article>
-                <article class="card">
-                    <h3>חילוץ והתנעה</h3>
-                    <p>התנעת רכב, מצבר חלש, רכב נעול או תקוע – אנחנו כאן.</p>
-                </article>
-                <article class="card">
-                    <h3>שירותי שטח</h3>
-                    <p>סיוע בפנצ׳ר, מילוי דלק, העברת רכב למוסך הקרוב.</p>
-                </article>
+            <div class="step-body">
+                <h1><span class="num">1</span> התקשרו — אנחנו זמינים 24/7</h1>
+                <p>תקועים עם הרכב? אנחנו מגיעים במהירות בבאר יעקב והסביבה.</p>
+                <div class="step-cta">
+                <a class="btn btn-primary" href="tel:+972524839975">התקשר עכשיו</a>
+                </div>
             </div>
-        </section>
-        <section class="areas container">
-            <h2>אזורי שירות</h2>
-            <p>באר יעקב, נס ציונה, רחובות, רמלה, לוד, ראשון לציון והסביבה.</p>
-            <div class="map-wrap">
-                <iframe title="מפת אזור שירות" src="https://www.google.com/maps?q=Beer+Yaakov&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="step slide" data-step="2">
+            <div class="step-img">
+                <img src="./assets/img/truck-2.jpg" alt="שיתוף מיקום לגרירה" loading="lazy" />
             </div>
+            <div class="step-body">
+                <h2><span class="num">2</span> שולחים מיקום ומידע קצר</h2>
+                <p>מספר רחוב/נקודת וויז, סוג התקלה, ודגם הרכב — כדי להגיע מוכנים.</p>
+            </div>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="step slide" data-step="3">
+            <div class="step-img">
+                <img src="./assets/img/truck-3.jpg" alt="הגעה מהירה לגרירה" loading="lazy" />
+            </div>
+            <div class="step-body">
+                <h2><span class="num">3</span> אנחנו מגיעים מהר</h2>
+                <p>ציוד בטיחות מלא ורצועות תקניות — טיפול עדין ובטוח ברכב שלכם.</p>
+            </div>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="step slide" data-step="4">
+            <div class="step-img">
+                <img src="./assets/img/truck-4.jpg" alt="גרירת הרכב למוסך" loading="lazy" />
+            </div>
+            <div class="step-body">
+                <h2><span class="num">4</span> גרירה ליעד שבחרתם</h2>
+                <p>מוסך קרוב, חניה פרטית או כל יעד אחר — הכל בתיאום מלא.</p>
+            </div>
+            </article>
+
+            <!-- Step 5 -->
+            <article class="step slide" data-step="5">
+            <div class="step-img">
+                <img src="./assets/img/truck-5.jpg" alt="סיום השירות" loading="lazy" />
+            </div>
+            <div class="step-body">
+                <h2><span class="num">5</span> תשלום הוגן ושקוף</h2>
+                <p>מחיר הוגן ללא הפתעות. קבלה מסודרת ושירות אנושי.</p>
+                <div class="step-cta">
+                <a class="btn btn-secondary" href="./contact.html#order">הזמן שירות</a>
+                </div>
+            </div>
+            </article>
+        </div>
+
+        <!-- Controls -->
+        <div class="steps-controls">
+            <button class="ctrl prev" aria-label="הקודם" id="prevBtn">‹</button>
+            <div class="dots" id="dots"></div>
+            <button class="ctrl next" aria-label="הבא" id="nextBtn">›</button>
+        </div>
         </section>
-        <section class="seo container">
-            <h2>גרר בבאר יעקב – כל מה שצריך לדעת</h2>
-            <p>מחפשים <strong>גרר בבאר יעקב</strong>? מר גרר מספקים מענה מיידי לכל תקלה: רכב שלא מניע, תאונה או תקלה פתאומית. אנו פועלים עם צוות מקצועי וציוד בטיחות מלא.</p>
-            <ul class="keywords">
-                <li>גרר בבאר יעקב</li>
-                <li>גרר בנס ציונה</li>
-                <li>גרר ברחובות</li>
-                <li>גרר ברמלה</li>
-                <li>גרר בלוד</li>
-            </ul>
+
+        <!-- Quick benefits in red/white -->
+        <section class="benefits">
+        <ul>
+            <li>הגעה מהירה • 24/7</li>
+            <li>מחיר הוגן • שקיפות מלאה</li>
+            <li>באר יעקב, נס ציונה, רחובות, רמלה, לוד</li>
+        </ul>
         </section>
     </main>
 
