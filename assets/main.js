@@ -1,6 +1,6 @@
 // /assets/main.js
 
-// Footer year
+// Footer year + init
 document.addEventListener('DOMContentLoaded', () => {
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
@@ -11,7 +11,6 @@ function initStepsSlider() {
   const track = document.getElementById('stepsTrack');
   if (!track) return; // slider not on this page
 
-  const container = track.closest('.steps') || track.parentElement;
   const slides = Array.from(track.querySelectorAll('.slide'));
   const prev = document.getElementById('prevBtn');
   const next = document.getElementById('nextBtn');
@@ -20,17 +19,12 @@ function initStepsSlider() {
 
   if (total <= 1) return;
 
-  // Ensure smooth animation even if CSS is missing it
-  track.style.willChange = 'transform';
-  if (!track.style.transition) {
-    track.style.transition = 'transform 450ms ease';
-  }
-
   let index = 0;
-  let timer = null;
-  let isPaused = false;
-  const AUTO_MS = 4500;
-  const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Optional: light fade effect without layout shifts
+  slides.forEach(s => {
+    s.style.transition = 'opacity 300ms ease';
+  });
 
   // Build dots
   if (dotsWrap) {
@@ -39,7 +33,7 @@ function initStepsSlider() {
       const b = document.createElement('button');
       b.type = 'button';
       b.setAttribute('aria-label', `Slide ${i + 1}`);
-      b.addEventListener('click', () => { go(i); restart(); });
+      b.addEventListener('click', () => { go(i); });
       dotsWrap.appendChild(b);
     });
   }
@@ -49,67 +43,30 @@ function initStepsSlider() {
     [...dotsWrap.children].forEach((b, i) => b.classList.toggle('active', i === index));
   }
 
+  function render() {
+    slides.forEach((s, i) => {
+      const active = i === index;
+      s.style.opacity = active ? '1' : '0';
+      s.style.pointerEvents = active ? 'auto' : 'none';
+      // Keep layout stable: show only the active slide
+      s.style.display = active ? 'grid' : 'none';
+      s.setAttribute('aria-hidden', active ? 'false' : 'true');
+    });
+    updateDots();
+  }
+
   function go(i) {
     index = (i + total) % total;
-    track.style.transform = `translateX(-${index * 100}%)`;
-    updateDots();
+    render();
   }
 
   function nextSlide() { go(index + 1); }
   function prevSlide() { go(index - 1); }
 
-  // Autoplay controls
-  function start() {
-    if (REDUCED_MOTION || isPaused) return;
-    stop();
-    timer = setInterval(nextSlide, AUTO_MS);
-  }
-  function stop() { if (timer) { clearInterval(timer); timer = null; } }
-  function pause() { isPaused = true; stop(); }
-  function resume() { isPaused = false; start(); }
-  function restart() { stop(); start(); }
-
-  // Buttons
-  if (prev) prev.addEventListener('click', () => { prevSlide(); restart(); });
-  if (next) next.addEventListener('click', () => { nextSlide(); restart(); });
-
-  // Pause on hover/focus/visibility
-  [container, track].forEach(el => {
-    if (!el) return;
-    el.addEventListener('mouseenter', pause);
-    el.addEventListener('mouseleave', resume);
-    el.addEventListener('focusin', pause);
-    el.addEventListener('focusout', resume);
-    el.addEventListener('touchstart', pause, { passive: true });
-    el.addEventListener('touchend', resume);
-  });
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stop(); else start();
-  });
-
-  // Keyboard
-  window.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft') { prevSlide(); restart(); }
-    if (e.key === 'ArrowRight') { nextSlide(); restart(); }
-    if (e.key === ' ') { e.preventDefault(); isPaused ? resume() : pause(); }
-  });
-
-  // Swipe (pointer events)
-  let startX = null, lastX = 0, dragging = false;
-  track.addEventListener('pointerdown', e => { startX = e.clientX; dragging = true; pause(); });
-  window.addEventListener('pointermove', e => {
-    if (!dragging || startX === null) return;
-    lastX = e.clientX;
-  });
-  window.addEventListener('pointerup', () => {
-    if (!dragging) return;
-    const dx = lastX - startX;
-    if (dx > 50) prevSlide();
-    else if (dx < -50) nextSlide();
-    dragging = false; startX = null; resume();
-  });
+  // Buttons (click-only)
+  if (prev) prev.addEventListener('click', prevSlide);
+  if (next) next.addEventListener('click', nextSlide);
 
   // Init
   go(0);
-  start();
 }
