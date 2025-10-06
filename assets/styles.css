@@ -20,9 +20,6 @@ img{max-width:100%;display:block}
 
 .container{max-width:var(--container);margin-inline:auto;padding:16px}
 
-/* ===== Red/White Theme ===== */
-body.theme-redwhite{background:var(--white);color:var(--black)}
-
 .site-header{
   display:flex;
   justify-content:space-between;
