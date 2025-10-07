@@ -74,6 +74,15 @@ img{max-width:100%;display:block}
   line-height: 1.1;
 }
 
+@media (max-width:430px){
+  .sticky-cta .btn{
+    min-width:auto;
+    flex:1 1 auto;   /* allow buttons to shrink and wrap naturally */
+    font-size:0.9rem;
+    padding:8px 12px;
+  }
+}
+
 .btn-call{background:var(--red);color:#fff;border-color:var(--red)}
 .btn-call:hover{background:var(--red-dark)}
 .btn-call.alt{background:#222;border-color:#222}
