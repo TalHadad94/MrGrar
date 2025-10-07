@@ -40,29 +40,33 @@ img{max-width:100%;display:block}
 .nav a.active{border-bottom:3px solid var(--red)}
 .site-footer{border-top:1px solid var(--border);margin-top:24px}
 
-/* Sticky CTA bar */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:999px;
+  padding:10px 16px;border:1px solid var(--border);box-shadow:var(--shadow);font-weight:600
+}
+
+.btn-call{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-call:hover{background:var(--red-dark)}
+.btn-call.alt{background:#222;border-color:#222}
+.btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-secondary{background:#f6f6f6}
+
 .sticky-cta{
   position: sticky;
   top: 0;
   z-index: 10;
-
   display: flex;
   flex-wrap: wrap; /* allow buttons to wrap instead of shrinking */
-  gap: 8px;
-  justify-content: flex-start;
+  gap: 12px;
+  justify-content: space-between;
   align-items: center;
-
   background: var(--white);
   border-bottom: 1px solid var(--border);
+  direction: ltr; /* force layout left-to-right */
 
   /* align content edges with .container */
   padding-block: 10px;
   padding-inline: max(16px, calc((100vw - var(--container)) / 2 + 16px));
-}
-
-.btn{
-  display:inline-flex;align-items:center;gap:8px;border-radius:999px;
-  padding:10px 16px;border:1px solid var(--border);box-shadow:var(--shadow);font-weight:600
 }
 
 .sticky-cta .btn{
@@ -74,23 +78,31 @@ img{max-width:100%;display:block}
   line-height: 1.1;
 }
 
-@media (max-width:430px){
-  .sticky-cta .btn{
-    min-width:auto;
-    flex:1 1 auto;   /* allow buttons to shrink and wrap naturally */
-    font-size:0.9rem;
-    padding:8px 12px;
-  }
+.cta-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
-.btn-call{background:var(--red);color:#fff;border-color:var(--red)}
-.btn-call:hover{background:var(--red-dark)}
-.btn-call.alt{background:#222;border-color:#222}
-.btn-wa{background:#25D366;color:#07150b;border-color:#25D366}
-.btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
-.btn-secondary{background:#f6f6f6}
-/* alias for contact.html */
-.btn-whatsapp{background:#25D366;color:#07150b;border-color:#25D366}
+/* Circle WhatsApp button */
+.btn-wa {
+  background: #25D366;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  border: none;
+  padding: 0;
+}
+
+.btn-wa img {
+  width: 24px;
+  height: 24px;
+}
 
 /* Steps Slider */
 .steps{
