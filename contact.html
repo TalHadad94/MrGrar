@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/contact.css" />
 </head>
 
 <body>
@@ -41,24 +42,43 @@
     </div>
 
     <main class="container" id="order">
-        <h1>צור קשר / הזמנת שירות</h1>
-        <div class="contact-grid">
-            <form class="contact-form" method="post" action="https://formspree.io/f/your-id">
-                <label>שם מלא<input name="name" required></label>
-                <label>טלפון<input name="phone" type="tel" required></label>
-                <label>מיקום נוכחי<input name="location" placeholder="לדוגמה: רח׳ הרצל 10, באר יעקב" required></label>
-                <label>סוג תקלה<select name="issue">
-                <option>הרכב לא מניע</option>
-                <option>פנצ׳ר</option>
-                <option>תאונה</option>
-                <option>אחר</option>
-                </select></label>
-                <label>הודעה<textarea name="message" rows="4"></textarea></label>
-                <button class="btn btn-primary" type="submit">שליחה</button>
-            </form>
-            <aside class="contact-aside">
-            </aside>
-        </div>
+        <section class="contact-section">
+            <header class="contact-header">
+            <h1>צור קשר / הזמנת שירות</h1>
+            <p class="contact-subtitle">נשמח לעזור לכם בכל שעה — שירות גרירה וחילוץ בבאר יעקב והסביבה.</p>
+            </header>
+
+            <div class="contact-grid">
+                <!-- Form -->
+                <form class="contact-form" method="post" action="https://formspree.io/f/your-id">
+                    <h2>שלחו פנייה מהירה</h2>
+                    <label>שם מלא<input name="name" required></label>
+                    <label>טלפון<input name="phone" type="tel" required></label>
+                    <label>מיקום נוכחי<input name="location" placeholder="לדוגמה: רח׳ הרצל 10, באר יעקב" required></label>
+                    <label>סוג תקלה<select name="issue">
+                    <option>הרכב לא מניע</option>
+                    <option>פנצ׳ר</option>
+                    <option>תאונה</option>
+                    <option>אחר</option>
+                    </select></label>
+                    <label>הודעה<textarea name="message" rows="4"></textarea></label>
+                    <button class="btn btn-primary" type="submit">שליחה</button>
+                </form>
+
+                <!-- Aside with info -->
+                <aside class="contact-aside">
+                    <div class="contact-card">
+                        <h2>צור קשר ישיר</h2>
+                        <ul class="contact-list">
+                            <li><img src="./assets/phone.svg" alt=""> <a href="tel:+972552765546">055-276-5546</a></li>
+                            <li><img src="./assets/whatsapp.svg" alt=""> <a href="https://wa.me/972552765546" target="_blank">שלח הודעת ווטסאפ</a></li>
+                            <li><img src="./assets/location.svg" alt=""> באר יעקב והסביבה</li>
+                            <li><img src="./assets/clock.svg" alt=""> זמינים 24/7</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer container">
