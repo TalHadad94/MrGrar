@@ -229,3 +229,71 @@
   .step-body {padding: 16px;}
   .step-body h2, .step-body h1 {font-size: 1.1rem;}
 }
+
+/* --- WHY US SECTION --- */
+.why-us {
+  text-align: center;
+  padding-block: 80px;
+}
+
+.why-us h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.why-us .why-subtitle {
+  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.why-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+}
+
+.why-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--black);
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* responsive tweaks */
+@media (max-width: 600px) {
+  .why-us {
+    padding-block: 60px;
+  }
+  .why-card img {
+    width: 42px;
+    height: 42px;
+  }
+}
