@@ -17,6 +17,13 @@ body {
   margin-inline: auto;
 }
 
+.legal-logo {
+    position: absolute;
+    display: block;
+    width: 80px;
+    margin: 30px auto 10px;
+}
+
 /* ========== HEADERS ========== */
 h1, h2, h3 {
   color: #111;
