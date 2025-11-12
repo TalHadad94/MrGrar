@@ -14,28 +14,6 @@ Live site: https://www.mrgrar.co.il/
 - Responsive: consistent image aspect ratio in slides
 - Accessibility: visible focus states, semantic HTML, meaningful image `alt`
 
-## Project Structure
-```
-.
-├─ index.html
-├─ contact.html
-├─ blog/
-│  ├─ index.html
-│  ├─ how-to-choose-tow-service.html
-│  └─ towing-beer-yaakov-guide.html
-└─ assets/
-   ├─ styles.css
-   ├─ main.js
-   ├─ logo.png
-   ├─ og.jpg
-   └─ img/
-      ├─ truck-1.jpeg
-      ├─ truck-2.jpg
-      ├─ truck-3.jpg
-      ├─ truck-4.jpg
-      └─ truck-5.jpg
-```
-
 ## Quick Start (Local)
 No build step — just serve the folder.
 
