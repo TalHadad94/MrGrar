@@ -183,38 +183,85 @@ img{max-width:100%;display:block}
   height: 24px;
 }
 
-.ctrl{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;font-size:22px;line-height:0;cursor:pointer}
-.dots{display:flex;gap:6px}
-.dots button{width:10px;height:10px;border-radius:50%;border:0;background:#ddd;cursor:pointer}
-.dots button.active{background:var(--red)}
+.dots{
+  display:flex;gap:6px
+}
 
-.benefits ul{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:18px 0}
-.benefits li{background:#fff;border:1px solid var(--border);border-radius:999px;padding:8px 12px}
+.dots button{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:0;
+  background:#ddd;
+  cursor:pointer;
+}
+
+.dots button.active{
+  background:var(--red);
+}
+
+.benefits ul{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  list-style:none;
+  padding:0;
+  margin:18px 0;
+}
+
+.benefits li{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:8px 12px;
+}
 
 /* Blog */
-.post-list{list-style:none;padding:0;margin:0}
-.post{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-.post h2{margin:0 0 6px;font-size:1.2rem}
-.post time{color:var(--muted);font-size:.9rem}
-.post-body{border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.post-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.post{
+  display:block;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+}
+
+.post h2{
+  margin:0 0 6px;
+  font-size:1.2rem;
+}
+
+.post time{
+  color:var(--muted);
+  font-size:.9rem;}
+
+.post-body{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+}
+
 
 /* Blog header logo (used on blog article pages) */
-.logo{font-weight:800;font-size:1.4rem}
-.logo span{color:var(--red)}
+.logo{
+  font-weight:800;
+  font-size:1.4rem;
+}
 
-/* Contact page */
-.contact-form{display:grid;gap:12px}
-label{display:grid;gap:6px}
-input,select,textarea{border:1px solid var(--border);color:var(--black);padding:10px;border-radius:10px}
+.logo span{
+  color:var(--red)
+}
 
 /* Responsive */
 .brand-text-phone{display:none}
 
 @media (max-width:900px){
-  .slide{grid-template-columns:1fr;gap:12px}
   .brand-text{display:none} /* keep header compact on mobile */
   .brand-text-phone{display:initial}
-  .step-img{aspect-ratio: var(--slide-ratio-mobile)} /* shorter window on mobile */
 }
 
 /* Slightly tighter buttons on small screens */
