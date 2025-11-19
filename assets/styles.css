@@ -328,3 +328,114 @@ img {
     font-size: 0.95rem;
   }
 }
+
+/* Accessibility button */
+.accessibility-wrapper {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 120;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Round main button */
+.accessibility-toggle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.accessibility-toggle:hover,
+.accessibility-toggle:focus-visible {
+  background: var(--red);
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Panel */
+.accessibility-panel {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 10px 12px;
+  min-width: 220px;
+  max-width: 260px;
+  font-size: 0.95rem;
+}
+
+.accessibility-title {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Buttons inside panel */
+.accessibility-panel button {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f6f6f6;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.accessibility-panel button:hover,
+.accessibility-panel button:focus-visible {
+  background: #ececec;
+  outline: none;
+}
+
+/* Link to accessibility statement */
+.accessibility-link {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/* High contrast mode */
+body.accessibility-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.accessibility-contrast a {
+  color: var(--red) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 560px) {
+  .accessibility-wrapper {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .accessibility-toggle {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .accessibility-panel {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}

@@ -18,6 +18,33 @@
     <link rel="stylesheet" href="./assets/footer.css" />
 </head>
 
+<!-- Accessibility button -->
+<div class="accessibility-wrapper" aria-label="תפריט נגישות">
+  <button 
+    class="accessibility-toggle" 
+    type="button" 
+    aria-haspopup="true" 
+    aria-expanded="false"
+  >
+    ♿
+  </button>
+
+  <div class="accessibility-panel" hidden>
+    <strong class="accessibility-title">תפריט נגישות</strong>
+    <button type="button" data-action="increase-font">הגדלת טקסט</button>
+    <button type="button" data-action="decrease-font">הקטנת טקסט</button>
+    <button type="button" data-action="reset">איפוס</button>
+    <a 
+      href="./legal/accessibility-statement.html" 
+      class="accessibility-link"
+      target="_blank" 
+      rel="noopener"
+    >
+      הצהרת נגישות
+    </a>
+  </div>
+</div>
+
 <body>
     <header class="site-header container">
         <a href="./" class="brand-row">

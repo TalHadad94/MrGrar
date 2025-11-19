@@ -70,3 +70,44 @@ function initStepsSlider() {
   // Init
   go(0);
 }
+
+// Accessibility button
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.querySelector('.accessibility-toggle');
+  const panel = document.querySelector('.accessibility-panel');
+
+  if (!toggleBtn || !panel) return;
+
+  let fontScale = 1; // 1rem base
+
+  // Toggle menu open/close
+  toggleBtn.addEventListener('click', function () {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    panel.hidden = isExpanded;
+  });
+
+  // Handle actions inside the panel
+  panel.addEventListener('click', function (event) {
+    const btn = event.target.closest('button[data-action]');
+    if (!btn) return;
+
+    const action = btn.dataset.action;
+
+    if (action === 'increase-font') {
+      fontScale = Math.min(fontScale + 0.1, 1.5);
+      document.documentElement.style.fontSize = fontScale + 'rem';
+    }
+
+    if (action === 'decrease-font') {
+      fontScale = Math.max(fontScale - 0.1, 0.8);
+      document.documentElement.style.fontSize = fontScale + 'rem';
+    }
+
+    if (action === 'reset') {
+      fontScale = 1;
+      document.documentElement.style.fontSize = '';
+    }
+  });
+});
+
