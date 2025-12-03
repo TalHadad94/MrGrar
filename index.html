@@ -110,77 +110,36 @@
         }
     }
     </script>
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-        "@type": "Question",
-        "name": "האם מר גרר זמין 24/7?",
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "כן. מר גרר מספק שירותי גרירה וחילוץ 24/7 בבאר יעקב, נס ציונה, רחובות, רמלה, לוד וראשון לציון."
-        }
-        },
-        {
-        "@type": "Question",
-        "name": "כמה עולה גרר?",
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "המחיר עבור גרר משתנה לפי מרחק, סוג הרכב ושעת הקריאה, ובדרך כלל נע בין 250-500 ש\"ח באזור באר יעקב והסביבה. לקבלת מחיר מדויק התקשרו למר גרר וניתן הצעת מחיר במקום."
-        }
-        },
-        {
-        "@type": "Question",
-        "name": "באילו אזורים מר גרר נותן שירות?",
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "מר גרר מעניק שירותי גרירה וחילוץ בעיקר בבאר יעקב, נס ציונה, רחובות, רמלה, לוד וראשון לציון, ויכול להגיע גם לאזורים נוספים במרכז לפי הצורך."
-        }
-        },
-        {
-        "@type": "Question",
-        "name": "מה לעשות אם הרכב לא מניע?",
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ראשית ודאו שהרכב נמצא במקום בטוח, הפעילו אורות אזהרה והרחיקו את הנוסעים משפת הכביש. לאחר מכן התקשרו למר גרר לקבלת סיוע - ניתן לעזור בהתנעת הרכב, חילוץ או גרירה למוסך."
-        }
-        }
-    ]
-    }
-    </script>
 </head>
 
-<!-- Accessibility button -->
-<div class="accessibility-wrapper" aria-label="תפריט נגישות">
-  <button 
-    class="accessibility-toggle" 
-    type="button" 
-    aria-haspopup="true" 
-    aria-expanded="false"
-  >
-    ♿
-  </button>
-
-  <div class="accessibility-panel" hidden>
-    <strong class="accessibility-title">תפריט נגישות</strong>
-    <button type="button" data-action="increase-font">הגדלת טקסט</button>
-    <button type="button" data-action="decrease-font">הקטנת טקסט</button>
-    <button type="button" data-action="reset">איפוס</button>
-    <a 
-      href="./legal/accessibility-statement.html" 
-      class="accessibility-link"
-      target="_blank" 
-      rel="noopener"
-    >
-      הצהרת נגישות
-    </a>
-  </div>
-</div>
-
 <body>
+    <!-- Accessibility button -->
+    <div class="accessibility-wrapper" aria-label="תפריט נגישות">
+        <button 
+            class="accessibility-toggle" 
+            type="button" 
+            aria-haspopup="true" 
+            aria-expanded="false"
+        >
+            ♿
+        </button>
+
+        <div class="accessibility-panel" hidden>
+            <strong class="accessibility-title">תפריט נגישות</strong>
+            <button type="button" data-action="increase-font">הגדלת טקסט</button>
+            <button type="button" data-action="decrease-font">הקטנת טקסט</button>
+            <button type="button" data-action="reset">איפוס</button>
+            <a 
+            href="./legal/accessibility-statement.html" 
+            class="accessibility-link"
+            target="_blank" 
+            rel="noopener"
+            >
+            הצהרת נגישות
+            </a>
+        </div>
+    </div>
+
     <header class="site-header container">
         <a href="./" class="brand-row">
         <img src="./assets/img/logo.png" alt="מר גרר" class="brand-logo" />
@@ -349,6 +308,18 @@
                 </div>
             </div>
         </section>
+
+        <section class="home-faq-teaser">
+            <h2>שאלות נפוצות על שירותי הגרירה שלנו</h2>
+            <ul>
+                <li>כמה עולה גרר באזור באר יעקב?</li>
+                <li>האם אתם עובדים מול חברות ביטוח?</li>
+                <li>האם ניתן להזמין גרר לאופנוע?</li>
+            </ul>
+            <a href="./FAQ/" class="btn-secondary">
+                לצפייה בכל השאלות
+            </a>
+        </section>
     </main>
 
     <footer class="site-footer container">
@@ -367,6 +338,7 @@
             <ul>
                 <li><a href="./">דף הבית</a></li>
                 <li><a href="./contact.html">צור קשר</a></li>
+                <li><a href="./FAQ/">שאלות נפוצות</a></li>
                 <li><a href="./blog/">בלוג</a></li>
             </ul>
             </div>
