@@ -380,3 +380,24 @@
     height: 42px;
   }
 }
+
+/* .faq-section */
+.page-hero {
+  max-width: 900px;
+  margin: 2.5rem auto 1.5rem;
+}
+
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.faq-item + .faq-item {
+  margin-top: 1.5rem;
+}
+
+.home-faq-teaser {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: right;
+}
