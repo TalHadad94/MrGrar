@@ -1,0 +1,140 @@
+/* Layout for all areas pages */
+.towing-main {
+  padding-block: 2.5rem 3rem;
+}
+
+/* Hero section – centered like homepage */
+.towing-hero {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.towing-hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.towing-hero p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.towing-hero-note {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Buttons row in hero */
+.towing-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* Make hero call button a nice pill */
+.towing-hero .btn-call {
+  border-radius: 999px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+}
+
+/* FIX: .btn-wa here should look like a normal green button, not the round icon */
+.towing-hero .btn-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  min-width: auto;
+  height: auto;
+  background-color: #25d366; /* WhatsApp green */
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Optional: outline style for the “secondary” modifier */
+.towing-hero .btn-wa.secondary {
+  background-color: transparent;
+  border: 2px solid #25d366;
+  color: #25d366;
+}
+
+/* Generic section cards */
+.towing-section {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  padding: 1.75rem 1.5rem;
+  border-radius: 16px;
+  background-color: #f7f7f7;
+}
+
+/* Let last section breathe a bit less at the bottom */
+.towing-section:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.towing-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.towing-section p,
+.towing-section li {
+  line-height: 1.7;
+}
+
+/* Grid for advantages cards */
+.towing-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.towing-card {
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.towing-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
+}
+
+/* Lists */
+.towing-areas-list,
+.towing-price-list {
+  list-style: disc;
+  padding-inline-start: 1.25rem;
+}
+
+.towing-steps {
+  list-style: decimal;
+  padding-inline-start: 1.5rem;
+}
+
+.towing-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.towing-links li + li {
+  margin-top: 0.4rem;
+}
+
+/* Slightly wider layout on larger screens */
+@media (min-width: 768px) {
+  .towing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .towing-section {
+    padding-inline: 2rem;
+  }
+}
