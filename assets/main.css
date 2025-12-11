@@ -113,6 +113,12 @@
   }
 }
 
+@media (max-width: 380px) {
+  .hero-badges li:not(:first-child) {
+      display: none;
+  }
+}
+
 /* --- WHY US SECTION --- */
 .why-us {
   text-align: center;
