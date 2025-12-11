@@ -166,6 +166,45 @@
   }
 }
 
+/* Homepage About section */
+.about-home {
+    padding: 4rem 0;
+}
+
+.about-home h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-home p {
+    max-width: 60ch;
+    margin: 0 auto 1rem;
+    line-height: 1.9;
+    font-size: 1rem;
+}
+
+/* Optional: add a subtle separation from other sections */
+.about-home {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* If your site uses smaller paddings on mobile, you can tighten it */
+@media (max-width: 600px) {
+    .about-home {
+        padding: 3rem 2rem;
+    }
+
+    .about-home h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-home p {
+        font-size: 0.95rem;
+    }
+}
+
 /* --- SERVICE AREAS --- */
 .service-areas {
   background: #fafafa;
