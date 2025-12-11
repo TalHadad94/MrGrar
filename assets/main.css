@@ -119,6 +119,59 @@
   }
 }
 
+/* --- PRICE SNIPPET --- */
+.price-snippet {
+  padding-block: 40px 10px;
+}
+
+.price-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 22px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.price-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.price-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.price-card strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .price-snippet {
+    padding-block: 32px 0;
+  }
+
+  .price-card {
+    padding: 20px 18px;
+  }
+
+  .price-card h2 {
+    font-size: 1.35rem;
+  }
+
+  .price-card p {
+    font-size: 0.95rem;
+  }
+}
+
 /* --- WHY US SECTION --- */
 .why-us {
   text-align: center;
