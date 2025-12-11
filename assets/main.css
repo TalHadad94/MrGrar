@@ -114,7 +114,7 @@
 }
 
 @media (max-width: 380px) {
-  .hero-badges li:not(:first-child) {
+  .hero-badges {
       display: none;
   }
 }
