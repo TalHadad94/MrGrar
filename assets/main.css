@@ -46,6 +46,12 @@
   color: #f3f3f3;
 }
 
+.hero-content h1,
+.hero-content p,
+.hero-badges li {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
 .hero-cta {
   display: flex;
   justify-content: center;
@@ -82,6 +88,15 @@
   font-weight: 600;
   color: #fff;
   opacity: 0.9;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.75rem 2rem;
+    background: rgba(114, 133, 210, 0.3);
+    border-radius: 18px;
+    backdrop-filter: blur(2px);
 }
 
 /* Mobile adjustments */
@@ -168,7 +183,9 @@
 
 /* Homepage About section */
 .about-home {
-    padding: 4rem 0;
+    padding: 4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .about-home h2 {
@@ -184,13 +201,14 @@
     font-size: 1rem;
 }
 
-/* Optional: add a subtle separation from other sections */
-.about-home {
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+.about-link {
+    display: block;            /* Makes the button behave like a block */
+    width: fit-content;        /* Size only as big as the button text */
+    margin: 1.5rem auto 0;     /* Auto left/right = center */
+    font-weight: 600;
+    text-align: center;
 }
 
-/* If your site uses smaller paddings on mobile, you can tighten it */
 @media (max-width: 600px) {
     .about-home {
         padding: 3rem 2rem;
@@ -436,7 +454,24 @@
 }
 
 .home-faq-teaser {
-  max-width: 900px;
-  margin: 3rem auto;
-  text-align: right;
+    max-width: 900px;
+    margin: 3rem auto;
+    text-align: center;      /* center all text */
 }
+
+.home-faq-teaser ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.home-faq-teaser li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.home-faq-teaser .btn {
+    margin-top: 1.5rem;
+}
+
