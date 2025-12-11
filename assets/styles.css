@@ -91,6 +91,16 @@ img {
   transition: opacity 0.25s ease, color 0.25s ease;
 }
 
+/* Add separator before every link except the first */
+.nav a:not(:first-child)::before {
+    content: "|";
+    position: absolute;
+    right: -0.8rem;    /* Because RTL */
+    color: #ccc;    /* Soft grey – adjust to match your design */
+    font-weight: 300;
+    pointer-events: none;
+}
+
 .nav a:hover {
   opacity: 1;
   color: var(--red-dark);
